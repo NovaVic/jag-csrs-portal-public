@@ -7,7 +7,7 @@ ENV NODE_ROOT /usr/src/app
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
+COPY src/frontend/csrs-portal/package.json src/frontend/csrs-portal/yarn.lock ./
 
 RUN yarn install
 
