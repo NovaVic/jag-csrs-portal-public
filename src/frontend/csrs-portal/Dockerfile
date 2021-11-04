@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY src/frontend/csrs-portal/package.json src/frontend/csrs-portal/yarn.lock ./
-
+RUN yarn config set network-timeout 600000 -g
 RUN yarn install
 
 COPY . .
